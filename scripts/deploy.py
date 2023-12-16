@@ -5,16 +5,17 @@ from scripts.helpful_scripts import (
     LOCAL_BLOCKCHAIN_ENVIRONMENTS,FORKED_LOCAL_ENVIROMENTS,
 )
 
-
 def deploy_fund_me():
     account = get_account()
     print(account)
+    print(FORKED_LOCAL_ENVIROMENTS)
     # pass the price feed address to thid contract
     if (
         network.show_active() not in LOCAL_BLOCKCHAIN_ENVIRONMENTS
         and FORKED_LOCAL_ENVIROMENTS 
     ):
-        price_feed_address = config["networks"]["sepolia"][
+        print("测试：",network.show_active())
+        price_feed_address = config["networks"][network.show_active()][
             "eth_usd_price_feed"
         ]
     else:

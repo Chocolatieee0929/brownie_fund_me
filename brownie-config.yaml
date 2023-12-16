@@ -16,7 +16,7 @@ networks:
     eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
     verify: True
   mainnet-fork-dev:
-    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    eth_usd_price_feed: "0xc929ad75B72593967DE83E7F7Cda0493458261D9"
     verify: False
   minnet:
     verify: True # 空白变量被编译成非类型，这会导致错误
